@@ -1,0 +1,456 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  display: flex;
+  gap: 24px;
+  padding: 22px;
+}
+
+.sidebar {
+  width: 210px;
+  height: calc(100vh - 44px);
+  position: sticky;
+  top: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-top {
+  width: 100%;
+}
+
+.logo {
+  width: 130px;
+  margin-bottom: 30px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+nav a,
+.create-link {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background: #181818;
+}
+
+.create-link {
+  display: block;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+.main {
+  flex: 1;
+  max-width: 820px;
+}
+
+.section {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #222;
+  margin-bottom: 50px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1,
+h2 {
+  margin: 0 0 18px;
+}
+
+input {
+  background: #111;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 12px;
+  width: 45%;
+}
+
+.composer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 24px;
+}
+
+.composer p {
+  flex: 1;
+  color: #bbb;
+}
+
+button {
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: #222;
+  border: 1px solid #333;
+}
+
+.profile-pic.small {
+  width: 38px;
+  height: 38px;
+}
+
+.profile-pic.big {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+}
+
+.post-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.post-user h3 {
+  margin: 0;
+}
+
+.post-user p,
+.gray,
+.caption,
+.side-box p,
+.profile-box p {
+  color: #aaa;
+}
+
+.large-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+
+.photo {
+  background-color: #222;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: 10px;
+}
+
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6 {
+  width: 100%;
+  height: 220px;
+}
+
+.image1 {
+  background-image: url("collage-1.jpg");
+}
+
+.image2 {
+  background-image: url("collage-2.jpg");
+}
+
+.image3 {
+  background-image: url("collage-3.jpg");
+}
+
+.image4 {
+  background-image: url("collage-4.jpg");
+}
+
+.image5 {
+  background-image: url("collage-5.jpg");
+}
+
+.image6 {
+  background-image: url("collage-6.jpg");
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  color: #ccc;
+  margin-top: 14px;
+}
+
+.blank-board {
+  min-height: 430px;
+  border: 1px dashed #555;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.tools button {
+  background: #151515;
+  color: white;
+  border: 1px solid #333;
+}
+
+.publish {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.board-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.board-card {
+  flex: 1 1 230px;
+  background: #101010;
+  border: 1px solid #292929;
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.mini-collage {
+  height: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: black;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.mini-collage div {
+  background-color: #222;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.mini-collage div:nth-child(1) {
+  width: 58%;
+}
+
+.mini-collage div:nth-child(2) {
+  width: 38%;
+}
+
+.mini-collage div:nth-child(3) {
+  width: 35%;
+}
+
+.mini-collage div:nth-child(4) {
+  width: 60%;
+}
+
+.explore1 div:nth-child(1) { background-image: url("explore-1.jpg"); }
+.explore1 div:nth-child(2) { background-image: url("explore-2.jpg"); }
+.explore1 div:nth-child(3) { background-image: url("explore-3.jpg"); }
+.explore1 div:nth-child(4) { background-image: url("explore-4.jpg"); }
+
+.explore2 div:nth-child(1) { background-image: url("explore-5.jpg"); }
+.explore2 div:nth-child(2) { background-image: url("explore-6.jpg"); }
+.explore2 div:nth-child(3) { background-image: url("explore-7.jpg"); }
+.explore2 div:nth-child(4) { background-image: url("explore-8.jpg"); }
+
+.explore3 div:nth-child(1) { background-image: url("explore-9.jpg"); }
+.explore3 div:nth-child(2) { background-image: url("explore-10.jpg"); }
+.explore3 div:nth-child(3) { background-image: url("explore-11.jpg"); }
+.explore3 div:nth-child(4) { background-image: url("explore-12.jpg"); }
+
+.explore4 div:nth-child(1) { background-image: url("explore-13.jpg"); }
+.explore4 div:nth-child(2) { background-image: url("explore-14.jpg"); }
+.explore4 div:nth-child(3) { background-image: url("explore-15.jpg"); }
+.explore4 div:nth-child(4) { background-image: url("explore-16.jpg"); }
+
+.saved1 div:nth-child(1) { background-image: url("saved-1.jpg"); }
+.saved1 div:nth-child(2) { background-image: url("saved-2.jpg"); }
+.saved1 div:nth-child(3) { background-image: url("saved-3.jpg"); }
+.saved1 div:nth-child(4) { background-image: url("saved-4.jpg"); }
+
+.saved2 div:nth-child(1) { background-image: url("saved-5.jpg"); }
+.saved2 div:nth-child(2) { background-image: url("saved-6.jpg"); }
+.saved2 div:nth-child(3) { background-image: url("saved-7.jpg"); }
+.saved2 div:nth-child(4) { background-image: url("saved-8.jpg"); }
+
+.saved3 div:nth-child(1) { background-image: url("saved-9.jpg"); }
+.saved3 div:nth-child(2) { background-image: url("saved-10.jpg"); }
+.saved3 div:nth-child(3) { background-image: url("saved-11.jpg"); }
+.saved3 div:nth-child(4) { background-image: url("saved-12.jpg"); }
+
+.saved4 div:nth-child(1) { background-image: url("saved-13.jpg"); }
+.saved4 div:nth-child(2) { background-image: url("saved-14.jpg"); }
+.saved4 div:nth-child(3) { background-image: url("saved-15.jpg"); }
+.saved4 div:nth-child(4) { background-image: url("saved-16.jpg"); }
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.right-side {
+  width: 250px;
+  position: sticky;
+  top: 22px;
+  height: fit-content;
+}
+
+.side-box {
+  background: #101010;
+  border: 1px solid #292929;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 800px) {
+  .app {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    background: #0b0b0b;
+    border-top: 1px solid #333;
+    padding: 10px;
+    display: block;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 8px 5px;
+  }
+
+  .create-link {
+    margin-top: 8px;
+    padding: 9px;
+    font-size: 13px;
+  }
+
+  .main {
+    max-width: none;
+    padding: 16px 14px 120px;
+  }
+
+  .right-side {
+    display: none;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .composer {
+    flex-wrap: wrap;
+  }
+
+  .composer p {
+    width: calc(100% - 60px);
+    flex: none;
+  }
+
+  .composer button {
+    width: 100%;
+  }
+
+  .large-collage {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6 {
+    height: 170px;
+  }
+
+  .board-card {
+    flex: 1 1 100%;
+  }
+}
